@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Task List</title>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 mx-auto">
+            <div class="card card-bg" id="main">
+              <div class="card-header">
+                <div class="display-3 pb-3">Task List</div>
+                <div class="card-body">
+                  <form id="task-form">
+                    <div class="form-group w-100">
+                      <label for="task" class="h6 font-weight-bold"
+                        >New Task</label
+                      ><br />
+                      <input
+                        type="text"
+                        class="form-control-md bg-light border border-0 p-1 w-100 bg-transparent text-black"
+                        id="task"
+                        placeholder="Click to add a new Task"
+                      />
+                      <hr style="height: 1px; background-color: #333;" />
+                    </div>
+
+                    <input type="submit" class="btn btn-add" value="Add Task" />
+                  </form>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="card-title">
+                  <h2 id="task-title" class="font-weight-normal">Tasks</h2>
+                </div>
+                <label for="filter" class="my-2 font-weight-bold"
+                  >Filter Tasks</label
+                >
+                <input
+                  type="text"
+                  class="form-control-md border border-0 px-1 w-100 bg-transparent"
+                  id="filter"
+                  name="filter"
+                  placeholder="Enter Task"
+                />
+                <hr style="height: 1px; background-color: #333;" />
+                <ul class="list-group"></ul>
+                <a href="#" class="clear-tasks btn pt-3 my-3 btn-clear"
+                  >Clear Tasks</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./app.js"></script>
+
+    <script>
+      // Get the current year for copyright
+      $("#year").text(new Date().getFullYear());
+    </script>
+  </body>
+</html>
